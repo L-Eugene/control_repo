@@ -4,7 +4,7 @@ node default {
     content => "Hello, world!",
   }
   
-  package { 'mc':
+  package { 'mysql':
     ensure => present
   }
 }
