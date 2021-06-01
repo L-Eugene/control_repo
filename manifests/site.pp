@@ -3,4 +3,8 @@ node default {
     ensure => file,
     content => "Hello, world!",
   }
+  
+  package { 'mc':
+    ensure => present
+  }
 }
