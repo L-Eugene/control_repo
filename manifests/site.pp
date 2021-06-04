@@ -12,12 +12,16 @@ node default {
   include dev_editor
 }
 
-class dev_user{
-  user { 'eugene':
+class dev_user(
+  $username = 'eugene',
+  $password = '$1$pWicQEb0$lGXc.RyHF7VAG7tKOpIap1', #qwerty
+  $groups   = ['wheel']
+){
+  user { $username:
     ensure => present,
     managehome => true,
-    groups => ['wheel'],
-    password => '$1$pWicQEb0$lGXc.RyHF7VAG7tKOpIap1'
+    groups => $groups,
+    password => $password
   }
 }
 
