@@ -20,6 +20,9 @@ class dev_user(
   $password = '$1$pWicQEb0$lGXc.RyHF7VAG7tKOpIap1', #qwerty
   $groups   = ['wheel']
 ){
+  group { $groups:
+    ensure => present
+  }
   user { $username:
     ensure => present,
     managehome => true,
