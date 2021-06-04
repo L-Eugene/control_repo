@@ -24,6 +24,9 @@ class dev_user_eugene (
   include dev_editor
 }
 
+node 'slave1.puppet' { 
+  class { 'apache': }
+}
 
 class dev_user(
   $username = 'eugene',
