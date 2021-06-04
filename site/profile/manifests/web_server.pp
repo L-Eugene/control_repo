@@ -1,3 +1,4 @@
 class profile::web_server {
-  class { 'apache': }
+  #class { 'apache': }
+  include dynamic
 }
