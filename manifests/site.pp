@@ -12,13 +12,13 @@ node default {
 }
 
 class dev_user_eugene (
-  $pass = '$1$pWicQEb0$lGXc.RyHF7VAG7tKOpIap1', #qwerty
-  $grp   = ['wheel']
+  $password = '$1$pWicQEb0$lGXc.RyHF7VAG7tKOpIap1', #qwerty
+  $groups   = ['wheel']
 ) {
   class { 'dev_user':
-    $username => 'eugene',
-    $password => $pass,
-    $groups => $grp
+    username => 'eugene',
+    password => $password,
+    groups => $groups
   }
   
   include dev_editor
