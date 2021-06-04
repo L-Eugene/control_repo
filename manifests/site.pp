@@ -16,7 +16,7 @@ class dev_user{
   user { 'eugene':
     ensure => present,
     managehome => true,
-    group => ['wheel'],
+    groups => ['wheel'],
     password => '$1$pWicQEb0$lGXc.RyHF7VAG7tKOpIap1'
   }
 }
