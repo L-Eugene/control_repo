@@ -27,6 +27,6 @@ class dev_editor{
   }
   file { '/home/eugene/.vimrc':
     ensure => file,
-    source => 'puppet:///modules/dev_environment/vimrc'
+    source => 'puppet:///modules/dev_env/vimrc'
   }
 }
