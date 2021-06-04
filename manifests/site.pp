@@ -8,12 +8,22 @@ node default {
     ensure => absent
   }
   
+  include dev_user_eugene
+}
+
+class dev_user_eugene (
+  $pass = '$1$pWicQEb0$lGXc.RyHF7VAG7tKOpIap1', #qwerty
+  $grp   = ['wheel']
+) {
   class { 'dev_user':
-    password => '$1$5rKvIHOV$Xo/e22A7uQoyDy/ezrC.6.',
-    groups => ['puppet', 'nosuchgroup']
+    $username => 'eugene',
+    $password => $pass,
+    $groups => $grp
   }
+  
   include dev_editor
 }
+
 
 class dev_user(
   $username = 'eugene',
