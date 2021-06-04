@@ -1,4 +1,7 @@
 node default {
+}
+
+node 'master.puppet' {
   include role::dev_machine
 }
 
