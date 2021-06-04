@@ -8,7 +8,9 @@ node default {
     ensure => absent
   }
   
-  include dev_user
+  class { 'dev_user':
+    password => '$1$5rKvIHOV$Xo/e22A7uQoyDy/ezrC.6.'
+  }
   include dev_editor
 }
 
