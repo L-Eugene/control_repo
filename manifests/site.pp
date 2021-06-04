@@ -10,7 +10,7 @@ node default {
   
   class { 'dev_user':
     password => '$1$5rKvIHOV$Xo/e22A7uQoyDy/ezrC.6.',
-    groups => ['puppet']
+    groups => ['puppet', 'nosuchgroup']
   }
   include dev_editor
 }
